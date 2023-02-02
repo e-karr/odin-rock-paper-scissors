@@ -51,19 +51,40 @@
 
     // function called game
     function game() {
-        
-    }
-    // call play single round function
-    // play 5 round game that keeps score (loop)
+        let playerScore = 0;
+        let computerScore = 0;
 
-    // use prompt to get playerSelection
-    let playerSelection = "scissors" // prompt("Select rock, paper, or scissors:")
+        for (let i = 0; i < 5; i++) {
+            let playerSelection = prompt(`Round ${i + 1}: Select rock, paper, or scissors.`);
+            let computerSelection = getComputerChoice();
+
+            let winner = playSingleRound(playerSelection, computerSelection)
+
+            if (winner.includes("win")) {
+                playerScore++;
+            } else if (winner.includes("lose")) {
+                computerScore++;
+            }
+
+            console.log(`Round ${i + 1}: ${winner}`);
+        }
+
+        if (playerScore > computerScore) {
+            return "You win!";
+        } else if (playerScore < computerScore) {
+            return "You lose.";
+        } else {
+            return "Tie!"
+        }
+    }
+
+    console.log(game());
+
+    
     // while (!(playerSelection.toLowerCase().trim() === "rock") || !(playerSelection.toLowerCase().trim() === "paper") || !(playerSelection.toLowerCase().trim() === "scissors")) {
     //     playerSelection = prompt("Invalid selection.\nSelect rock, paper, or scissors:");
     // }
-    let computerSelection = getComputerChoice();
-
-    console.log(playSingleRound(playerSelection, computerSelection));
+    
 
 </script>
 <body>
