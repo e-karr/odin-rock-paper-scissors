@@ -7,7 +7,29 @@
     <title>Rock Paper Scissors</title>
 </head>
 <script>
-    
+    function getComputerChoice() {
+        let options = ["Rock", "Paper", "Scissors"];
+        let randomIndex = Math.floor(Math.random() * options.length)
+        let computerSelection = options[randomIndex]
+        return computerSelection;
+    }
+
+    // function to play single round
+    // two parameters: playerSelection, computerSelection
+    // case -insensitive
+    // compare results and declare a winner
+
+
+    // function called game
+    // call play single round function
+    // play 5 round game that keeps score (loop)
+
+    // use prompt to get playerSelection
+    let playerSelection = prompt("Select rock, paper, or scissors:")
+    while (playerSelection.toLowerCase().trim() !== "rock" || playerSelection.toLowerCase().trim() !== "paper" || playerSelection.toLowerCase().trim() !== "scissors") {
+        playerSelection = prompt("Invalid selection.\nSelect rock, paper, or scissors:");
+    }
+
 </script>
 <body>
     
