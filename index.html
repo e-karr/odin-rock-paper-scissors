@@ -15,6 +15,18 @@
         return computerSelection;
     }
 
+    function getPlayerChoice() {
+    let playerSelection = prompt("Select rock, paper, or scissors. ");
+    
+    playerSelection = playerSelection.toLowerCase().trim();
+
+    while (!options.includes(playerSelection)) {
+        playerSelection = prompt("Invalid selection.\nSelect rock, paper, or scissors: ");
+    }
+
+    return playerSelection;
+    }
+
     function playSingleRound(playerSelection, computerSelection) {
 
         if (playerSelection === "paper") {
@@ -49,16 +61,13 @@
         let computerScore = 0;
 
         for (let i = 0; i < rounds; i++) {
-            let playerSelection = prompt(`Round ${i + 1}: Select rock, paper, or scissors.`);
-            playerSelection = playerSelection.toLowerCase().trim();
+            console.log(`Round ${i + 1}:`);
 
-            while (!options.includes(playerSelection)) {
-                playerSelection = prompt(`Round ${i + 1}: Invalid selection.\nSelect rock, paper, or scissors:`);
-            }
+            let playerSelection = getPlayerChoice();
 
             let computerSelection = getComputerChoice();
 
-            let winner = playSingleRound(playerSelection, computerSelection)
+            let winner = playSingleRound(playerSelection, computerSelection);
 
             if (winner.includes("win")) {
                 playerScore++;
@@ -66,7 +75,7 @@
                 computerScore++;
             }
 
-            console.log(`Round ${i + 1}: ${winner}`);
+            console.log(`${winner}`);
         }
 
         if (playerScore > computerScore) {
