@@ -16,15 +16,15 @@
     }
 
     function getPlayerChoice() {
-    let playerSelection = prompt("Select rock, paper, or scissors. ");
-    
-    playerSelection = playerSelection.toLowerCase().trim();
+        let playerSelection = prompt("Select rock, paper, or scissors. ");
+        
+        playerSelection = playerSelection.toLowerCase().trim();
 
-    while (!options.includes(playerSelection)) {
-        playerSelection = prompt("Invalid selection.\nSelect rock, paper, or scissors: ");
-    }
+        while (!options.includes(playerSelection)) {
+            playerSelection = prompt("Invalid selection.\nSelect rock, paper, or scissors: ");
+        }
 
-    return playerSelection;
+        return playerSelection;
     }
 
     function playSingleRound(playerSelection, computerSelection) {
