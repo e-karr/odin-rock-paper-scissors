@@ -7,8 +7,9 @@
     <title>Rock Paper Scissors</title>
 </head>
 <script>
+    let options = ["rock", "paper", "scissors"];
+
     function getComputerChoice() {
-        let options = ["Rock", "Paper", "Scissors"];
         let randomIndex = Math.floor(Math.random() * options.length)
         let computerSelection = options[randomIndex]
         return computerSelection;
