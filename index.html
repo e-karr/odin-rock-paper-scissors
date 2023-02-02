@@ -19,7 +19,32 @@
     // case -insensitive
     // compare results and declare a winner
     function playSingleRound(playerSelection, computerSelection) {
-        
+        playerSelection = playerSelection.toLowerCase().trim();
+        computerSelection = computerSelection.toLowerCase().trim();
+
+        // if player selection is paper
+            // if computer selection is paper
+                // Tie!
+            // if computer selection is rock
+                // You win! Paper beats Rock.
+            // if computer selection is scissors
+                // You lose! Scissors beats Paper.
+
+        // if player selection is rock
+            // if computer selection is paper
+                // You lose! Paper beats Rock.
+            // if computer selection is rock
+                // Tie!
+            // if computer selection is scissors
+                // You win! Rock beats Scissors.
+
+        // if player selection is scissors
+            // if computer selection is paper
+                // You win! Scissors beats Paper.
+            // if computer selection is rock
+                // You lose! Rock beats Scissors.
+            // if computer selection is scissors
+                // Tie!
     }
 
     // function called game
