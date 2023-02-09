@@ -29,30 +29,14 @@
 
     function playSingleRound(playerSelection, computerSelection) {
 
-        if (playerSelection === "paper") {
-            if (computerSelection === "paper") {
-                return "Tie!";
-            } else if (computerSelection === "rock") {
-                return "You win! Paper beats Rock.";
-            } else {
-                return "You lose! Scissors beats Paper.";
-            }
-        } else if (playerSelection === "rock") {
-            if (computerSelection === "paper") {
-                return "You lose! Paper beats Rock.";
-            } else if (computerSelection === "rock") {
-                return "Tie!";
-            } else {
-                return "You win! Rock beats Scissors.";
-            }
+        if (playerSelection === computerSelection){
+            return "Tie!"
+        } else if ((playerSelection === "paper" && computerSelection === "scissors") || 
+                    (playerSelection === "rock" && computerSelection === "paper") ||
+                    (playerSelection === "scissors" && computerSelection === "rock")) {
+            return `You lose! ${computerSelection} beats ${playerSelection}.`;
         } else {
-            if (computerSelection === "paper") {
-                return "You win! Scissors beats Paper.";
-            } else if (computerSelection === "rock") {
-                return "You lose! Rock beats Scissors.";
-            } else {
-                return "Tie!";
-            }
+            return `You win! ${playerSelection} beats ${computerSelection}.`;
         }
     }
 
