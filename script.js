@@ -1,38 +1,28 @@
 let options = ["Rock", "Paper", "Scissors"];
 
-let rock = document.querySelector("#rock");
-let paper = document.querySelector("#paper");
-let scissors = document.querySelector("#scissors");
 let buttons = document.querySelectorAll(".player-button");
-let computerChoice = document.querySelector('#computer-selection');
-let playerChoice = "";
+let computerChoiceParagraph = document.querySelector('#computer-selection');
+let playerSelection = "";
 let computerSelection = "";
 
-rock.addEventListener("click", playerSelection);
-paper.addEventListener("click", playerSelection);
-scissors.addEventListener("click", playerSelection);
+buttons.forEach(button => button.addEventListener('click', addButtonBorder));
 
-buttons.forEach(button => button.addEventListener('transitionend', removeSelection));
+buttons.forEach(button => button.addEventListener('transitionend', removeButtonBorder));
 
 buttons.forEach(button => button.addEventListener('click', () => {
     computerSelection = getComputerChoice()
-    computerChoice.textContent = computerSelection;
+    computerChoiceParagraph.textContent = computerSelection;
     console.log(`Hammond: ${computerSelection}`);
+
+    playerSelection = button.value;
+    console.log(`Player: ${playerSelection}`);
 }));
 
-buttons.forEach(button => button.addEventListener('click', () => {
-    playerChoice = button.value;
-    console.log(`Player: ${playerChoice}`);
-}));
-
-
-
-
-function playerSelection(e) {
+function addButtonBorder(e) {
     this.classList.add('selected');
 }
 
-function removeSelection(e) {
+function removeButtonBorder(e) {
     this.classList.remove('selected');
 }
 
@@ -42,17 +32,17 @@ function getComputerChoice() {
     return computerSelection;
 }
 
-function getPlayerChoice() {
-    let playerSelection = prompt("Select rock, paper, or scissors. ");
+// function getPlayerChoice() {
+//     let playerSelection = prompt("Select rock, paper, or scissors. ");
     
-    playerSelection = playerSelection.toLowerCase().trim();
+//     playerSelection = playerSelection.toLowerCase().trim();
 
-    while (!options.includes(playerSelection)) {
-        playerSelection = prompt("Invalid selection.\nSelect rock, paper, or scissors: ");
-    }
+//     while (!options.includes(playerSelection)) {
+//         playerSelection = prompt("Invalid selection.\nSelect rock, paper, or scissors: ");
+//     }
 
-    return playerSelection;
-}
+//     return playerSelection;
+// }
 
 function playSingleRound(playerSelection, computerSelection) {
     computerSelection = computerSelection.toLowerCase();
