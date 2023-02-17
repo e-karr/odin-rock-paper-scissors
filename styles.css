@@ -37,7 +37,7 @@ header {
 }
 
 .header-overlay-img {
-    /* border: 1px solid red; for debugging */
+    1px solid red; /* border: for debugging */
     display: flex;
     flex-direction: column;
 }
@@ -51,14 +51,16 @@ header {
 }
 
 .selection {
-    /* border: 1px solid red; for debugging */
+   /* border: 1px solid red; for debugging */
+    min-height: 22px;
+    min-width: 63px;
 }
 
 .selection-container {
-   /*  border: 1px solid red; for debugging */
+    /* border: 1px solid red; for debugging */
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
     justify-content: center;
     flex-wrap: wrap;
 }
