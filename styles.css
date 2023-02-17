@@ -74,12 +74,20 @@ header {
 .player-button {
     all: unset;
     cursor: pointer;
+    border-radius: 8px;
+    transition: all 2s ease;
 }
 
 button img {
     height: 200px;
     width: auto;
 }
+
+.selected {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+  }
 
 .scores-container {
     /* border: 1px solid red; for debugging */
