@@ -14,13 +14,10 @@ buttons.forEach(button => button.addEventListener('transitionend', removeButtonB
 buttons.forEach(button => button.addEventListener('click', () => {
     computerSelection = getComputerChoice()
     computerChoiceParagraph.textContent = computerSelection;
-    console.log(`Hammond: ${computerSelection}`);
 
     playerSelection = button.value;
-    console.log(`Player: ${playerSelection}`);
 
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(`Hammond score: ${computerScore}, Player score: ${playerScore}`);
+    playRound(playerSelection, computerSelection);
 }));
 
 function addButtonBorder(e) {
@@ -38,22 +35,20 @@ function getComputerChoice() {
 }
 
 function playRound(player, computer) {
-
-    computer = computer.toLowerCase();
     if (player === computer){
         document.querySelector('.game-round').textContent = "This round was a tie!";
-        return
-    } else if ((player === "paper" && computer === "scissors") || 
-                (player === "rock" && computer === "paper") ||
-                (player === "scissors" && computer === "rock")) {
+        return;
+    } else if ((player === "Paper" && computer === "Scissors") || 
+                (player === "Rock" && computer === "Paper") ||
+                (player === "Scissors" && computer === "Rock")) {
         computerScore++;
         document.querySelector('#computer-score').textContent = computerScore;
-        document.querySelector('.game-round').textContent = "Hammond won this round.";
-        return
+        document.querySelector('.game-round').textContent = `Hammond won this round. ${computer} beats ${player}.`;
+        return;
     } else {
         playerScore++;
         document.querySelector('#player-score').textContent = playerScore;
-        document.querySelector('.game-round').textContent = "You won this round!";
-        return
+        document.querySelector('.game-round').textContent = `You won this round! ${player} beats ${computer}.`;
+        return;
     }
 }
