@@ -2,6 +2,7 @@ let options = ["Rock", "Paper", "Scissors"];
 
 let buttons = document.querySelectorAll(".player-button");
 let computerChoiceParagraph = document.querySelector('#computer-selection');
+let gameStatus = document.querySelector('.game-round');
 let playerSelection = "";
 let computerSelection = "";
 let playerScore = 0;
@@ -36,19 +37,19 @@ function getComputerChoice() {
 
 function playRound(player, computer) {
     if (player === computer){
-        document.querySelector('.game-round').textContent = "This round was a tie!";
+        gameStatus.textContent = "This round was a tie!";
         return;
     } else if ((player === "Paper" && computer === "Scissors") || 
                 (player === "Rock" && computer === "Paper") ||
                 (player === "Scissors" && computer === "Rock")) {
         computerScore++;
         document.querySelector('#computer-score').textContent = computerScore;
-        document.querySelector('.game-round').textContent = `Hammond won this round. ${computer} beats ${player}.`;
+        gameStatus.textContent = `Hammond won this round. ${computer} beats ${player}.`;
         return;
     } else {
         playerScore++;
         document.querySelector('#player-score').textContent = playerScore;
-        document.querySelector('.game-round').textContent = `You won this round! ${player} beats ${computer}.`;
+        gameStatus.textContent = `You won this round! ${player} beats ${computer}.`;
         return;
     }
 }
