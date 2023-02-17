@@ -16,20 +16,20 @@
             <h3 class="header">It's you versus Hammond.</h3>
             <h4 class="header">First to 5 points is crowned the winner!</h4>
         </div>
-        <div class="header-overlay-img">
+        <!-- <div class="header-overlay-img">
             <img class="header-img" src="images/hammond.png" alt="Dog with blue bandana">
-        </div>
+        </div> -->
     </header>
     
-    <div class="choices">
-        <button class="player rock"><img src="images/rock.png" alt="closed fist"></button>
-        <button class="player paper"><img src="images/paper.png" alt="flat hand"></button>
-        <button class="player scissors"><img src="images/scissors.png" alt="hand making scissors"></button>
+    <div class="buttons-container">
+        <button class="player-button" id="rock"><img src="images/rock.png" alt="closed fist"></button>
+        <button class="player-button" id="paper"><img src="images/paper.png" alt="flat hand"></button>
+        <button class="player-button" id="scissors"><img src="images/scissors.png" alt="hand making scissors"></button>
     </div>
     
-    <div>
-        <div>Your score:</div>
-        <div>Hammond's score:</div>
+    <div class="scores-container">
+        <div class="score">Your score:</div><p id="player-score">0</p>
+        <div class="score">Hammond's score:</div><p id="computer-score">0</p>
     </div>
 
     <footer>

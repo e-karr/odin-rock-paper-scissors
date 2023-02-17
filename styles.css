@@ -4,7 +4,7 @@ body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    border: 1px solid red; /* for debugging */
+    /* border: 1px solid red; for debugging */
     color: white;
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@ header {
     /* border: 1px solid red; for debugging */
 }
 
-.choices {
+.buttons-container{
     /* border: 1px solid red; for debugging */
     text-align: center;
     display: flex;
@@ -59,7 +59,7 @@ header {
     justify-content: center;
 }
 
-.player {
+.player-button {
     padding: 0;
     background-color: transparent;
     border: none;
@@ -69,4 +69,22 @@ button img {
     height: 200px;
     width: auto;
     border-radius: 8px;
+}
+
+.scores-container {
+    /* border: 1px solid red; for debugging */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.score {
+    /* border: 1px solid red; for debugging */
+    font-size: 24px;
+}
+
+#player-score, #computer-score {
+    /* border: 1px solid red; for debugging */
+    font-size: 24px;
 }
