@@ -23,9 +23,8 @@ body {
 
 header {
     /* border: 1px solid red; for debugging */
-    padding: 50px 25px;
+    padding: 50px 50px 0px 25px;
     display: flex;
-
 }
 
 .header-titles {
@@ -39,16 +38,29 @@ header {
 
 .header-overlay-img {
     /* border: 1px solid red; for debugging */
-    flex: 1;
     display: flex;
-    align-items: center;
-    padding-right: 100px;
+    flex-direction: column;
 }
 
 .header-img {
     height: 250px;
     width: auto;
     /* border: 1px solid red; for debugging */
+    object-fit: contain;
+    object-position: center;
+}
+
+.selection {
+    /* border: 1px solid red; for debugging */
+}
+
+.selection-container {
+   /*  border: 1px solid red; for debugging */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .buttons-container{
@@ -60,15 +72,13 @@ header {
 }
 
 .player-button {
-    padding: 0;
-    background-color: transparent;
-    border: none;
+    all: unset;
+    cursor: pointer;
 }
 
 button img {
     height: 200px;
     width: auto;
-    border-radius: 8px;
 }
 
 .scores-container {
