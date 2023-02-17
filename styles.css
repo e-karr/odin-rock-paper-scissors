@@ -30,7 +30,7 @@ header {
 
 .header-titles {
     /* border: 1px solid red;  for debugging */
-    flex: 4;
+    flex: 8;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -42,10 +42,31 @@ header {
     flex: 1;
     display: flex;
     align-items: center;
+    padding-right: 100px;
 }
 
 .header-img {
     height: 250px;
     width: auto;
     /* border: 1px solid red; for debugging */
+}
+
+.choices {
+    /* border: 1px solid red; for debugging */
+    text-align: center;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.player {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+button img {
+    height: 200px;
+    width: auto;
+    border-radius: 8px;
 }
