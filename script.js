@@ -4,6 +4,8 @@ let buttons = document.querySelectorAll(".player-button");
 let computerChoiceParagraph = document.querySelector('#computer-selection');
 let playerSelection = "";
 let computerSelection = "";
+let playerScore = 0;
+let computerScore = 0;
 
 buttons.forEach(button => button.addEventListener('click', addButtonBorder));
 
@@ -16,6 +18,9 @@ buttons.forEach(button => button.addEventListener('click', () => {
 
     playerSelection = button.value;
     console.log(`Player: ${playerSelection}`);
+
+    console.log(playRound(playerSelection, computerSelection));
+    console.log(`Hammond score: ${computerScore}, Player score: ${playerScore}`);
 }));
 
 function addButtonBorder(e) {
@@ -32,27 +37,20 @@ function getComputerChoice() {
     return computerSelection;
 }
 
-// function getPlayerChoice() {
-//     let playerSelection = prompt("Select rock, paper, or scissors. ");
-    
-//     playerSelection = playerSelection.toLowerCase().trim();
+function playRound(player, computer) {
 
-//     while (!options.includes(playerSelection)) {
-//         playerSelection = prompt("Invalid selection.\nSelect rock, paper, or scissors: ");
-//     }
-
-//     return playerSelection;
-// }
-
-function playSingleRound(playerSelection, computerSelection) {
-    computerSelection = computerSelection.toLowerCase();
-    if (playerSelection === computerSelection){
+    computer = computer.toLowerCase();
+    if (player === computer){
         return "Tie!"
-    } else if ((playerSelection === "paper" && computerSelection === "scissors") || 
-                (playerSelection === "rock" && computerSelection === "paper") ||
-                (playerSelection === "scissors" && computerSelection === "rock")) {
-        return `You lose! ${computerSelection} beats ${playerSelection}.`;
+    } else if ((player === "paper" && computer === "scissors") || 
+                (player === "rock" && computer === "paper") ||
+                (player === "scissors" && computer === "rock")) {
+        computerScore++;
+        document.querySelector('#computer-score').textContent = computerScore;
+        return `You lose! ${computer} beats ${player}.`;
     } else {
-        return `You win! ${playerSelection} beats ${computerSelection}.`;
+        playerScore++;
+        document.querySelector('#player-score').textContent = playerScore;
+        return `You win! ${player} beats ${computer}.`;
     }
 }
