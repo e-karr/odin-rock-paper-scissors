@@ -75,7 +75,7 @@ header {
     all: unset;
     cursor: pointer;
     border-radius: 8px;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 button img {
