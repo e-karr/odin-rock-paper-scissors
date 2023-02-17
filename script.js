@@ -1,15 +1,20 @@
-let options = ["rock", "paper", "scissors"];
+let options = ["Rock", "Paper", "Scissors"];
 
 let rock = document.querySelector("#rock");
 let paper = document.querySelector("#paper");
 let scissors = document.querySelector("#scissors");
 let buttons = document.querySelectorAll(".player-button");
+let computerChoice = document.querySelector('#computer-selection');
 
 rock.addEventListener("click", playerSelection);
 paper.addEventListener("click", playerSelection);
 scissors.addEventListener("click", playerSelection);
 
 buttons.forEach(button => button.addEventListener('transitionend', removeSelection));
+
+buttons.forEach(button => button.addEventListener('click', () => {
+    computerChoice.textContent = getComputerChoice();
+}));
 
 function playerSelection(e) {
     this.classList.add('selected');
@@ -18,8 +23,6 @@ function playerSelection(e) {
 function removeSelection(e) {
     this.classList.remove('selected');
 }
-
-
 
 function getComputerChoice() {
     let randomIndex = Math.floor(Math.random() * options.length)
@@ -40,7 +43,7 @@ function getPlayerChoice() {
 }
 
 function playSingleRound(playerSelection, computerSelection) {
-
+    computerSelection = computerSelection.toLowerCase();
     if (playerSelection === computerSelection){
         return "Tie!"
     } else if ((playerSelection === "paper" && computerSelection === "scissors") || 
