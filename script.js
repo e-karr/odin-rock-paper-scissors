@@ -5,6 +5,8 @@ let paper = document.querySelector("#paper");
 let scissors = document.querySelector("#scissors");
 let buttons = document.querySelectorAll(".player-button");
 let computerChoice = document.querySelector('#computer-selection');
+let playerChoice = "";
+let computerSelection = "";
 
 rock.addEventListener("click", playerSelection);
 paper.addEventListener("click", playerSelection);
@@ -13,8 +15,18 @@ scissors.addEventListener("click", playerSelection);
 buttons.forEach(button => button.addEventListener('transitionend', removeSelection));
 
 buttons.forEach(button => button.addEventListener('click', () => {
-    computerChoice.textContent = getComputerChoice();
+    computerSelection = getComputerChoice()
+    computerChoice.textContent = computerSelection;
+    console.log(`Hammond: ${computerSelection}`);
 }));
+
+buttons.forEach(button => button.addEventListener('click', () => {
+    playerChoice = button.value;
+    console.log(`Player: ${playerChoice}`);
+}));
+
+
+
 
 function playerSelection(e) {
     this.classList.add('selected');
