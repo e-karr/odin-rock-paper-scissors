@@ -41,16 +41,19 @@ function playRound(player, computer) {
 
     computer = computer.toLowerCase();
     if (player === computer){
-        return "Tie!"
+        document.querySelector('.game-round').textContent = "This round was a tie!";
+        return
     } else if ((player === "paper" && computer === "scissors") || 
                 (player === "rock" && computer === "paper") ||
                 (player === "scissors" && computer === "rock")) {
         computerScore++;
         document.querySelector('#computer-score').textContent = computerScore;
-        return `You lose! ${computer} beats ${player}.`;
+        document.querySelector('.game-round').textContent = "Hammond won this round.";
+        return
     } else {
         playerScore++;
         document.querySelector('#player-score').textContent = playerScore;
-        return `You win! ${player} beats ${computer}.`;
+        document.querySelector('.game-round').textContent = "You won this round!";
+        return
     }
 }
