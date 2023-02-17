@@ -40,41 +40,6 @@
         }
     }
 
-    function game(rounds) {
-        let playerScore = 0;
-        let computerScore = 0;
-
-        for (let i = 0; i < rounds; i++) {
-            console.log(`Round ${i + 1}:`);
-
-            let playerSelection = getPlayerChoice();
-
-            let computerSelection = getComputerChoice();
-
-            let winner = playSingleRound(playerSelection, computerSelection);
-
-            if (winner.includes("win")) {
-                playerScore++;
-            } else if (winner.includes("lose")) {
-                computerScore++;
-            }
-
-            console.log(`${winner}`);
-        }
-
-        if (playerScore > computerScore) {
-            return "You win!";
-        } else if (playerScore < computerScore) {
-            return "You lose.";
-        } else {
-            return "Tie!"
-        }
-    }
-
-    let numberRounds = Number(prompt("How many rounds do you want to play?"));
-
-    console.log(game(numberRounds));
-
 </script>
 <body>
     
