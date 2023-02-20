@@ -17,15 +17,17 @@ body {
 }
 
 footer {
-    font-size: 3vw;
+    font-size: 1vw;
 }
 
 .title {
     font-size: 5vw;
+    margin: 0;
 }
 
 h3, h4 {
     font-size: 3vw;
+    margin: 0;
 }
 
 header {
@@ -36,9 +38,6 @@ header {
 
 .header-titles {
     border: 1px solid orange;  /* for debugging */
-    flex: 8;
-    display: flex;
-    flex-direction: column;
 }
 
 .header-overlay-img {
@@ -61,6 +60,7 @@ header {
     min-height: 50px;
     min-width: 100px;
     font-size: 3vw;
+    margin: 10px;
 }
 
 .selection-container {
@@ -113,15 +113,20 @@ button img {
 .score {
     border: 1px solid goldenrod; /* for debugging */
     font-size: 3vw;
+    margin: 10px;
 }
 
 #player-score, #computer-score {
     border: 1px solid grey; /* for debugging */
     font-size: 3vw;
+    margin: 10px;
 }
 
 .game-round-container {
     text-align: center;
     font-size: 3vw;
-    min-height: 76px;
+    min-height: 150px;
+    margin: 10px;
+    border: 1px solid white; /* for debugging */
+    padding: 0;
 }
