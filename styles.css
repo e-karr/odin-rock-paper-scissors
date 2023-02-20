@@ -13,7 +13,7 @@ body {
 
 .title, .header, footer {
     text-align: center;
-    /* border: 1px solid black; for debugging */
+    border: 1px solid black; /* for debugging */
     
 }
 
@@ -22,13 +22,13 @@ body {
 }
 
 header {
-    /* border: 1px solid red; for debugging */
+    border: 1px solid red; /* for debugging */
     padding: 50px 50px 0px 25px;
     display: flex;
 }
 
 .header-titles {
-    /* border: 1px solid red;  for debugging */
+    border: 1px solid red;  /* for debugging */
     flex: 8;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@ header {
 }
 
 .header-overlay-img {
-    1px solid red; /* border: for debugging */
+    border: 1px solid red; /* for debugging */
     display: flex;
     flex-direction: column;
 }
@@ -45,19 +45,19 @@ header {
 .header-img {
     height: 250px;
     width: auto;
-    /* border: 1px solid red; for debugging */
+    border: 1px solid red; /* for debugging */
     object-fit: contain;
     object-position: center;
 }
 
 .selection {
-   /* border: 1px solid red; for debugging */
+   border: 1px solid red; /* for debugging */
     min-height: 22px;
     min-width: 63px;
 }
 
 .selection-container {
-    /* border: 1px solid red; for debugging */
+    border: 1px solid red; /* for debugging */
     display: flex;
     align-items: center;
     gap: 5px;
@@ -66,11 +66,12 @@ header {
 }
 
 .buttons-container{
-    /* border: 1px solid red; for debugging */
+    border: 1px solid red; /* for debugging */
     text-align: center;
     display: flex;
     gap: 50px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .player-button {
@@ -81,6 +82,7 @@ header {
 }
 
 button img {
+    border: 1px solid red; /* for debugging */
     height: 200px;
     width: auto;
 }
@@ -92,20 +94,21 @@ button img {
   }
 
 .scores-container {
-    /* border: 1px solid red; for debugging */
+    border: 1px solid red; /* for debugging */
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .score {
-    /* border: 1px solid red; for debugging */
+    border: 1px solid red; /* for debugging */
     font-size: 24px;
 }
 
 #player-score, #computer-score {
-    /* border: 1px solid red; for debugging */
+    border: 1px solid red; /* for debugging */
     font-size: 24px;
 }
 
