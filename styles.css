@@ -92,7 +92,7 @@ button img {
     /* border: 1px solid aquamarine; for debugging */
     height: auto;
     width: 100%;
-    max-width: 150px;
+    max-width: 200px;
 }
 
 .selected {
