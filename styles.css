@@ -28,6 +28,7 @@ footer {
 h3, h4 {
     font-size: 3vw;
     margin: 5px;
+    color: rgb(133, 214, 240);
 }
 
 header {
@@ -61,6 +62,7 @@ header {
     min-width: 100px;
     font-size: 3vw;
     margin: 10px;
+    color: rgb(240, 208, 133);
 }
 
 .selection-container {
@@ -114,12 +116,7 @@ button img {
     /* border: 1px solid goldenrod; for debugging */
     font-size: 3vw;
     margin: 10px;
-}
-
-#player-score, #computer-score {
-    /* border: 1px solid grey; for debugging */
-    font-size: 3vw;
-    margin: 10px;
+    color: rgb(133, 214, 240);
 }
 
 .game-round-container {
