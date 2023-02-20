@@ -13,7 +13,7 @@ body {
 
 .title, .header, footer {
     text-align: center;
-    border: 1px solid black; /* for debugging */
+    /* border: 1px solid black; for debugging */
 }
 
 footer {
@@ -31,17 +31,17 @@ h3, h4 {
 }
 
 header {
-    border: 1px solid blue; /* for debugging */
+    /* border: 1px solid blue; for debugging */
     padding: 50px 50px 0px 25px;
     display: flex;
 }
 
 .header-titles {
-    border: 1px solid orange;  /* for debugging */
+    /* border: 1px solid orange;  for debugging */
 }
 
 .header-overlay-img {
-    border: 1px solid red; /* for debugging */
+    /* border: 1px solid red; for debugging */
     display: flex;
     flex-direction: column;
 }
@@ -50,21 +50,21 @@ header {
     max-width: 150px;
     width: 100%;
     height: auto;
-    border: 1px solid yellow; /* for debugging */
+    /* border: 1px solid yellow; for debugging */
     object-fit: contain;
     object-position: center;
 }
 
 .selection {
-    border: 1px solid purple; /* for debugging */
-    min-height: 50px;
+    /* border: 1px solid purple; for debugging */
+    min-height: auto;
     min-width: 100px;
     font-size: 3vw;
     margin: 10px;
 }
 
 .selection-container {
-    border: 1px solid magenta; /* for debugging */
+    /* border: 1px solid magenta; for debugging */
     display: flex;
     align-items: center;
     gap: 5px;
@@ -73,7 +73,7 @@ header {
 }
 
 .buttons-container{
-    border: 1px solid coral; /* for debugging */
+    /* border: 1px solid coral; for debugging */
     text-align: center;
     display: flex;
     gap: 50px;
@@ -89,7 +89,7 @@ header {
 }
 
 button img {
-    border: 1px solid aquamarine; /* for debugging */
+    /* border: 1px solid aquamarine; for debugging */
     height: auto;
     width: 100%;
     max-width: 150px;
@@ -102,7 +102,7 @@ button img {
   }
 
 .scores-container {
-    border: 1px solid white; /* for debugging */
+    /* border: 1px solid white; for debugging */
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -111,13 +111,13 @@ button img {
 }
 
 .score {
-    border: 1px solid goldenrod; /* for debugging */
+    /* border: 1px solid goldenrod; for debugging */
     font-size: 3vw;
     margin: 10px;
 }
 
 #player-score, #computer-score {
-    border: 1px solid grey; /* for debugging */
+    /* border: 1px solid grey; for debugging */
     font-size: 3vw;
     margin: 10px;
 }
@@ -125,8 +125,8 @@ button img {
 .game-round-container {
     text-align: center;
     font-size: 3vw;
-    min-height: 150px;
+    min-height: 3vw;
     margin: 10px;
-    border: 1px solid white; /* for debugging */
+    /* border: 1px solid white; for debugging */
     padding: 0;
 }

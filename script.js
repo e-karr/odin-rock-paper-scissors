@@ -22,11 +22,9 @@ buttons.forEach(button => button.addEventListener('click', () => {
 
     if (playerScore === 5) {
         gameStatus.textContent = "YOU WON THE GAME 👑";
-        gameStatus.setAttribute('style', 'font-size: 40px;');
         resetGame();
     } else if (computerScore === 5) {
         gameStatus.textContent = "Hammond defeated you. 🐕";
-        gameStatus.setAttribute('style', 'font-size: 40px;');
         resetGame();
     }
 }));
@@ -36,7 +34,6 @@ function resetGame() {
     computerScore = 0;
     document.querySelector('#computer-score').textContent = computerScore;
     document.querySelector('#player-score').textContent = playerScore;
-    gameStatus.removeAttribute('style');
 }
 
 function addButtonBorder(e) {
