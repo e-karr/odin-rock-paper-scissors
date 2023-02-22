@@ -17,7 +17,7 @@ body {
 }
 
 footer {
-    font-size: 1vw;
+    font-size: 1vh;
 }
 
 .title {
@@ -26,7 +26,7 @@ footer {
 }
 
 h3, h4 {
-    font-size: 3vw;
+    font-size: 2vh;
     margin: 5px;
     color: rgb(133, 214, 240);
 }
@@ -60,7 +60,7 @@ header {
     /* border: 1px solid purple; for debugging */
     min-height: auto;
     min-width: 100px;
-    font-size: 3vw;
+    font-size: 3vh;
     margin: 10px;
     color: rgb(240, 208, 133);
 }
@@ -106,7 +106,7 @@ button img {
 .scores-container {
     /* border: 1px solid white; for debugging */
     display: flex;
-    gap: 20px;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -114,14 +114,14 @@ button img {
 
 .score {
     /* border: 1px solid goldenrod; for debugging */
-    font-size: 3vw;
-    margin: 10px;
+    font-size: 3vh;
+    margin: 1rem;
     color: rgb(133, 214, 240);
 }
 
 .game-round-container {
     text-align: center;
-    font-size: 3vw;
+    font-size: 3vh;
     min-height: 3vw;
     margin: 10px;
     /* border: 1px solid white; for debugging */
